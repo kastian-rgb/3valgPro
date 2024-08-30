@@ -1,21 +1,8 @@
-Brik[][] b = new Brik[8][8];
+Board b;
 
 void setup() {
   size(1920, 1080);
-  /*  b = new Brik("Fisk");
-   b.setPos(new PVector(100,100));
-   b.setImage("blacklego.png"); */
-
-
-
-  for (int i = 0; i<b.length; i++) {
-    for (int j = 0; j<b.length; j++) {
-      b[i][j] = new Brik(""+i);
-      b[i][j].setPos(new PVector(100+(110*i), 100+(100*j)));
-      b[i][j].setImage("blacklego.png");
-      b[i][j].setBackside("mads.png");
-    }
-  }
+  b = new Board(8);
   textSize(32);
 }
 
@@ -23,18 +10,13 @@ void setup() {
 
 void draw() {
   background(0);
-  //text(b.navn, b.getPosX(), b.getPosY());
-  for (int i = 0; i<b.length; i++) {
-    for (int j = 0; j<b.length; j++) {
-      b[i][j].display();
-    }
-  }
+  b.display();
 }
 
 void mousePressed() {
-  for (int i = 0; i<b.length; i++) {
-    for (int j = 0; j<b.length; j++) {
-      b[i][j].Click();
+  for (int i = 0; i<b.b.length; i++) {
+    for (int j = 0; j<b.b.length; j++) {
+      b.b[i][j].Click();
     }
   }
 }
