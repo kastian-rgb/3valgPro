@@ -23,7 +23,12 @@ class Gamecontroller {
       }
       break;
     case 2: 
-     
+     for (int i = 0; i<b.b.length; i++) {
+        for (int j = 0; j<b.b.length; j++) {
+          if(b.b[i][j].isFlipped() == true)
+          b.b[i][j].flip();
+        }
+      }
     }
     flipCount++;
   }

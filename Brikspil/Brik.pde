@@ -61,4 +61,8 @@ class Brik {
       flip();
     }
   }
+  
+  boolean isFlipped(){
+  return isFlipped;
+  }
 }
