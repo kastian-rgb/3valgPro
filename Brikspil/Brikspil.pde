@@ -1,7 +1,9 @@
 Board b;
+Gamecontroller g;
 
 void setup() {
   size(1920, 1080);
+  g = new Gamecontroller();
   b = new Board(8);
   textSize(32);
 }
@@ -14,9 +16,6 @@ void draw() {
 }
 
 void mousePressed() {
-  for (int i = 0; i<b.b.length; i++) {
-    for (int j = 0; j<b.b.length; j++) {
-      b.b[i][j].Click();
-    }
-  }
+  
+  g.GameTurn();
 }
