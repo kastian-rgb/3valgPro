@@ -57,10 +57,11 @@ class Brik {
 
   void Click() {
 
-    if (mouseX > pos.x && mouseX < pos.x+100 && mouseY > pos.y && mouseY< pos.y+50) {
+    if (mouseX > pos.x && mouseX < pos.x+100 && mouseY > pos.y && mouseY< pos.y+50 && !isFlipped) {
       flip();
+      g.setFlipCount();
     }
-  }
+}
   
   boolean isFlipped(){
   return isFlipped;
