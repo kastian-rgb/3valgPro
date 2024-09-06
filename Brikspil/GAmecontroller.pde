@@ -23,7 +23,9 @@ class Gamecontroller {
         for (int j = 0; j<b.b.length; j++) {
           if (b.b[i][j].isFlipped() == false) {
             b.b[i][j].Click();
+           
           }
+         println(b.b[i][j].navn);
         }
       }
       break;
@@ -38,9 +40,7 @@ class Gamecontroller {
       }
       break;
     }
-    println("F "+flipCount);
-    //flipCount++;
-    println(flipCount);
+    
   }
 
   void setFlipCount() {
