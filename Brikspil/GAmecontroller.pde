@@ -9,8 +9,8 @@ class Gamecontroller {
   void GameTurn() {
     switch(flipCount) {
     case 0: 
-      for (int i = 0; i<b.b.length; i++) {
-        for (int j = 0; j<b.b.length; j++) {
+      for (int i = 0; i<b.row; i++) {
+        for (int j = 0; j<b.col; j++) {
           if (b.b[i][j].isFlipped() == false) {
             b.b[i][j].Click();
           }
@@ -19,8 +19,8 @@ class Gamecontroller {
       break;
     case 1: 
 
-      for (int i = 0; i<b.b.length; i++) {
-        for (int j = 0; j<b.b.length; j++) {
+      for (int i = 0; i<b.row; i++) {
+        for (int j = 0; j<b.col; j++) {
           if (b.b[i][j].isFlipped() == false) {
             b.b[i][j].Click();
            
@@ -30,8 +30,8 @@ class Gamecontroller {
       }
       break;
     case 2: 
-      for (int i = 0; i<b.b.length; i++) {
-        for (int j = 0; j<b.b.length; j++) {
+      for (int i = 0; i<b.row; i++) {
+        for (int j = 0; j<b.col; j++) {
           if (b.b[i][j].isFlipped() == true) {
             b.b[i][j].flip();
             flipCount = 0;

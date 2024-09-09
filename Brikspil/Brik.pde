@@ -29,6 +29,7 @@ class Brik {
 
     img = loadImage("/data/"+n);
     img.resize(100, 50);
+    println("done");
   }
   
   void flip() {
