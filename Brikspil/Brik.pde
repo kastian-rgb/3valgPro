@@ -4,6 +4,7 @@ class Brik {
   PImage img;
   PImage img2;
   Boolean isFlipped = false;
+  Boolean isCorrect = false;
   String navn;
 
   Brik() {

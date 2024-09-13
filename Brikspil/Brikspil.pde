@@ -4,7 +4,7 @@ Gamecontroller g;
 void setup() {
   size(1920, 1080);
   g = new Gamecontroller();
-  b = new Board(3, 2,"image");
+  b = new Board(2, 3,"image");
   textSize(32);
 }
 

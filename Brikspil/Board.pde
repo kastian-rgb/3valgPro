@@ -21,7 +21,7 @@ class Board {
           back = img.getJSONObject(0);
           image = img.getJSONObject(brik);
 
-          b[i][j] = new Brik("fisk");
+          b[i][j] = new Brik();
           b[i][j].setBackside("blacklego.png");
           b[i][j].setImage(image.getString("file"));
           b[i][j].setNavn(image.getString("navn"));
@@ -36,7 +36,7 @@ class Board {
   void display() {
     for (int i = 0; i<row; i++) {
       for (int j = 0; j<col; j++) {
-          println(i+ " " + j);
+         
         b[i][j].display();
       }
     }
