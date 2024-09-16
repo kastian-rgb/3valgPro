@@ -22,7 +22,7 @@ class Board {
           image = img.getJSONObject(brik);
 
           b[i][j] = new Brik();
-          b[i][j].setBackside("blacklego.png");
+          b[i][j].setBackside(back.getString("file"));
           b[i][j].setImage(image.getString("file"));
           b[i][j].setNavn(image.getString("navn"));
           b[i][j].setPos(new PVector(100*i,100*j));
@@ -40,5 +40,11 @@ class Board {
         b[i][j].display();
       }
     }
+  }
+  
+  Brik returnBrik(int _i, int _j){
+  
+  return b[_i][_j];
+  
   }
 }
