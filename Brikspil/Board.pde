@@ -31,12 +31,13 @@ class Board {
         }
       }
     }
+    shuffel(10000);
   }
 
   void display() {
     for (int i = 0; i<row; i++) {
       for (int j = 0; j<col; j++) {
-         
+        println(b[i][j].getPos());
         b[i][j].display();
       }
     }
@@ -47,4 +48,19 @@ class Board {
   return b[_i][_j];
   
   }
+  
+  void shuffel(int s){
+  PVector temp;
+  for(int i =0; i<s;i++){
+    PVector ran1 = new PVector((int)random(0,row), (int)random(0,col));
+    PVector ran2 = new PVector((int)random(0,row), (int)random(0,col));
+    temp = b[(int)ran1.x][(int)ran1.y].getPos();
+    b[(int)ran1.x][(int)ran1.y].setPos(b[(int)ran2.x][(int)ran2.y].getPos());
+    b[(int)ran2.x][(int)ran2.y].setPos(temp);
+  
+  
+  }
+  
+  }
+  
 }

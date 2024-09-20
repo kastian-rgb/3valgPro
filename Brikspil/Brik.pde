@@ -26,20 +26,25 @@ class Brik {
     img2 = loadImage("/data/"+n);
     img2.resize(100, 50);
   }
-  
+
   void setBackside(String n) {
 
     img = loadImage("/data/"+n);
     img.resize(100, 50);
     //println("done");
   }
-  
+
   void flip() {
 
     isFlipped = !isFlipped;
   }
   void setNavn(String s) {
     navn = s;
+  }
+
+  PVector getPos() {
+
+    return pos;
   }
 
   float getPosX() {
@@ -64,9 +69,9 @@ class Brik {
       flip();
       g.setFlipCount();
     }
-}
-  
-  boolean isFlipped(){
-  return isFlipped;
+  }
+
+  boolean isFlipped() {
+    return isFlipped;
   }
 }
